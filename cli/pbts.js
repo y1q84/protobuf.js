@@ -173,6 +173,7 @@ exports.main = function(args, callback) {
                 Object.keys(imports).forEach(function(key) {
                     output.push("import * as " + key + " from \"" + imports[key] + "\";");
                 });
+                output.push("import {Long} " + " from \"" + imports["$protobuf"] + "\";");
             }
 
             output = output.join("\n") + "\n" + out.join("");
